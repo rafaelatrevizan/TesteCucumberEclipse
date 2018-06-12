@@ -81,6 +81,36 @@ public class aprenderCucumber {
 	    
 	}	
 	
+	@Dado("^que o ticket é AF(\\d+)$")
+	public void queOTicketÉAF(int arg1) throws Throwable {
+	    
+	}
+
+	@Dado("^que o valor da passagem é R\\$ (\\d+),(\\d+)$")
+	public void queOValorDaPassagemÉR$(int arg1, int arg2) throws Throwable {
+	    
+	}
+
+	@Dado("^que o nome do passageiro é \"([^\"]*)\"$")
+	public void queONomeDoPassageiroÉ(String arg1) throws Throwable {
+	  
+	}
+
+	@Dado("^que o telefone do passageiro é (\\d+)-(\\d+)$")
+	public void queOTelefoneDoPassageiroÉ(int arg1, int arg2) throws Throwable {
+	    
+	}
+
+	@Quando("^criar os steps$")
+	public void criarOsSteps() throws Throwable {
+	   
+	}
+
+	@Então("^o teste vai funcionar$")
+	public void oTesteVaiFuncionar() throws Throwable {
+	    
+	}
+
 
 
 }
