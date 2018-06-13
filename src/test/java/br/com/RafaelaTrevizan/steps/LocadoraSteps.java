@@ -1,6 +1,7 @@
 package br.com.RafaelaTrevizan.steps;
 
 import br.com.Rafaela_Trevizan.FilmeLocadora.Filme;
+import br.com.Rafaela_Trevizan.ServicoAluguel.Aluguar;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -8,13 +9,18 @@ import cucumber.api.java.pt.Quando;
 public class LocadoraSteps {
 	
 	private Filme filme;
+	private Aluguar aluguel;
+	
 	@Dado("^um filme com estoque  de (\\d+) unidades$")
 	public void um_filme_com_estoque_de_unidades(int arg1) throws Throwable {
+		filme = new Filme();
+		filme.setEstoque(arg1);
 	    
 	}
 
 	@Dado("^que o preço do aluguel seja R\\$(\\d+)$")
 	public void que_o_preço_do_aluguel_seja_R$(int arg1) throws Throwable {
+		aluguel.alugarFilme(filme);
 	    
 	}
 
