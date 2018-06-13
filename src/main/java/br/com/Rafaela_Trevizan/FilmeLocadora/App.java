@@ -1,4 +1,4 @@
-package br.com.Rafaela_Trevizan.TesteCucumber;
+package br.com.Rafaela_Trevizan.FilmeLocadora;
 
 /**
  * Hello world!

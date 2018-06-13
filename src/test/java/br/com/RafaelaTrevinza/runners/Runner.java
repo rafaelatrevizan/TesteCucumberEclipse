@@ -1,4 +1,4 @@
-package br.com.Rafaela_Trevizan.TesteCucumber;
+package br.com.RafaelaTrevinza.runners;
 
 import org.junit.runner.RunWith;
 import cucumber.api.junit.Cucumber;
@@ -8,11 +8,13 @@ import cucumber.api.SnippetType;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-		features = {"src/test/java"},
+		features = "src/test/resources/Features",
+		glue = "br.com.RafaelaTrevizan.steps",
 		plugin = "pretty",
 		monochrome = true,		
 		dryRun = false,
 		strict = false,
-		snippets = SnippetType.CAMELCASE
+		snippets = SnippetType.CAMELCASE,
+		tags = {"@primeiro"}
 		)
 public class Runner {}
