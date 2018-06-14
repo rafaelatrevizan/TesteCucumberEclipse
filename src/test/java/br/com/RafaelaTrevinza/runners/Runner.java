@@ -15,6 +15,6 @@ import cucumber.api.SnippetType;
 		dryRun = false,
 		strict = false,
 		snippets = SnippetType.CAMELCASE,
-		tags = {"@primeiro"}
+		tags = {"@locadora"}
 		)
 public class Runner {}
