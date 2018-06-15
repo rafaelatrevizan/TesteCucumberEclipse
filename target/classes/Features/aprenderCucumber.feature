@@ -16,19 +16,19 @@ Dado que o valor é 15
 Quando incrementar em 3
 Então o valor do contador será 18
 
-@tipo1
+
 Cenário: Deve implementar contador
 Dado que o valor é 123
 Quando incrementar em 35
 Então o valor do contador será 158
 
-@tipo2
+
 Cenario: Deve calcular atraso na entrega
 Dado que a entrega é dia 05/04/2018
 Quando a entrega atrasar 2 dias
 Então a entrega será efetuada em 07/04/2018
 
-@tipo1 @tipo2
+
 Cenario: Deve calcular atraso na entrega da China
 Dado que a entrega é dia 05/04/2018
 Quando a entrega atrasar 2 meses

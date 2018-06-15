@@ -1,0 +1,165 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#language: pt"
+      }
+    ],
+    "line": 2,
+    "elements": [
+      {
+        "line": 22,
+        "name": "Não deve inserir uma conta sem nome",
+        "description": "",
+        "id": "cadastro-de-contas;não-deve-inserir-uma-conta-sem-nome",
+        "after": [
+          {
+            "result": {
+              "duration": 878881254,
+              "status": "passed"
+            },
+            "match": {
+              "location": "srBarrigaConta.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 9154661550,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "que estou acessando a aplicação",
+            "match": {
+              "location": "srBarrigaConta.queEstouAcessandoAAplicação()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 259180350,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "informo o usuário \"rafaela@infotera.com.br\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "rafaela@infotera.com.br",
+                  "offset": 19
+                }
+              ],
+              "location": "srBarrigaConta.informoOUsuário(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 163914196,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "a senha \"@trevizan2018\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "@trevizan2018",
+                  "offset": 9
+                }
+              ],
+              "location": "srBarrigaConta.aSenha(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 765528791,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "seleciono entrar",
+            "match": {
+              "location": "srBarrigaConta.selecionoEntrar()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 80435114,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "visualizo a página inicial",
+            "match": {
+              "location": "srBarrigaConta.visualizoAPáginaInicial()"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 133778800,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "seleciono Contas",
+            "match": {
+              "location": "srBarrigaConta.selecionoContas()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 415094624,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "seleciono Adicionar",
+            "match": {
+              "location": "srBarrigaConta.selecionoAdicionar()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 343814353,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "seleciono Salvar",
+            "match": {
+              "location": "srBarrigaConta.selecionoSalvar()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 384423122,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "vou notificar que o nome da conta é obrigatório",
+            "match": {
+              "location": "srBarrigaConta.souNotificarQueONomeDaContaÉObrigatório()"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "line": 21,
+            "name": "@contaSemNome"
+          }
+        ]
+      }
+    ],
+    "name": "Cadastro de contas",
+    "description": "\r\nComo um usuário \r\nGostaria de cadastrar contas\r\nPara que eu possa distribuir meu dinheiro de uma forma mais organizada",
+    "id": "cadastro-de-contas",
+    "keyword": "Funcionalidade",
+    "uri": "SrBarriga.feature"
+  }
+]

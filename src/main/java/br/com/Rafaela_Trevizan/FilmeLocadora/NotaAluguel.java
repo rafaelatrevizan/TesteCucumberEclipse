@@ -1,4 +1,4 @@
-package br.com.Rafaela_Trevizan.ServicoAluguel;
+package br.com.Rafaela_Trevizan.FilmeLocadora;
 
 import java.util.Date;
 

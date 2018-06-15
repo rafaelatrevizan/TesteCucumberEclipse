@@ -10,11 +10,11 @@ import cucumber.api.SnippetType;
 @CucumberOptions(
 		features = "src/test/resources/Features",
 		glue = "br.com.RafaelaTrevizan.steps",
-		plugin = "pretty",
-		monochrome = true,		
+		plugin = {"pretty", "html:target/report-html", "json:target/report-json"},
+		monochrome = false,		
 		dryRun = false,
 		strict = false,
 		snippets = SnippetType.CAMELCASE,
-		tags = {"@locadora"}
+		tags = {"@contaSemNome"}
 		)
-public class Runner {}
+public class RunnerTest {}

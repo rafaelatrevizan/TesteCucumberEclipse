@@ -7,8 +7,10 @@ Funcionalidade: Alugar Filme
 
 
 Cenário: Deve alugar um filme com sucesso
-Dado um filme com estoque de 2 unidades
-E que o preço do aluguel seja R$3
+Dado um filme 
+| estoque | 2 |
+| preco   | 3 |
+| tipo    | comum |
 Quando alugar
 Então o preço do aluguel será R$3
 E a data de entrega será no dia seguinte
@@ -31,9 +33,10 @@ E a pontuação recebida será de <pontuacao> pontos
 
 Exemplos:
 |preco|tipo		  |valor|qtdias|pontuacao |
-|4		|extendida|8		| 3	 	 | 2				|
+|4		|estendida|8		| 3	 	 | 2				|
 |4	  |comum	  |4		| 1	 	 | 1				|
-
+|10   |estendida|20   |3     |2         |
+|5    |semanal  |15   |7     |3					| 
 #Cenário: Deve dar condições especiais para categoria extendida
 #Dado um filme com estoque de 2 unidades
 #E que o preço do aluguel seja R$4
