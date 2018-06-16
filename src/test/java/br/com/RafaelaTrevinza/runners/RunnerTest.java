@@ -15,6 +15,6 @@ import cucumber.api.SnippetType;
 		dryRun = false,
 		strict = false,
 		snippets = SnippetType.CAMELCASE,
-		tags = {"@contaSemNome"}
+		tags = {"@conta"}
 		)
 public class RunnerTest {}

@@ -1,4 +1,5 @@
 #language: pt
+@conta
 Funcionalidade: Cadastro de contas
 
 Como um usuário 
@@ -14,7 +15,7 @@ E seleciono entrar
 Então visualizo a página inicial
 Quando seleciono Contas
 E seleciono Adicionar
-E informo a conta "Conta de Teste"
+E informo a conta "Conta de teste"
 E seleciono Salvar
 Então a conta é inserida com sucesso
 
@@ -29,15 +30,16 @@ Quando seleciono Contas
 E seleciono Adicionar
 E seleciono Salvar
 Então vou notificar que o nome da conta é obrigatório
-#
-#Cenário: Não deve inserir uma conta com nome já existente 
-#Dado que estou acessando a aplicação
-#Quando informo o usuário "a@a"
-#E a senha "a"
-#E seleciono entrar
-#Então visualizo a página inicial
-#Quando seleciono Contas
-#E seleciono Adicionar
-#E informo a conta "Conta de Teste"
-#E seleciono Salvar
-#Então sou notificado que já existe uma conta com esse nome
+
+@jaexistente
+Cenário: Não deve inserir uma conta com nome já existente 
+Dado que estou acessando a aplicação
+Quando informo o usuário "rafaela@infotera.com.br"
+E a senha "@trevizan2018"
+E seleciono entrar
+Então visualizo a página inicial
+Quando seleciono Contas
+E seleciono Adicionar
+E informo a conta "Conta de teste"
+E seleciono Salvar
+Então sou notificado que já existe uma conta com esse nome

@@ -22,7 +22,8 @@ import junit.framework.Assert;
 public class srBarrigaConta{
 	private WebDriver nav;
 //	private LoginPage Login;
-	private LoginPage Login  = new LoginPage(nav);
+//	public LoginPage Login  = new LoginPage(nav);
+	
 	
 	@Dado("^que estou acessando a aplicação$")
 	public void queEstouAcessandoAAplicação() throws Throwable {
@@ -88,11 +89,15 @@ public class srBarrigaConta{
 	
 	@Então("^vou notificar que o nome da conta é obrigatório$")
 	public void souNotificarQueONomeDaContaÉObrigatório() throws Throwable {
-		ContaPage conta = new ContaPage(nav);
-	    conta.clickSave();
-	    String obg = nav.findElement(By.xpath("//div[@class = \"alert alert-danger\"]")).getText();
+		String obg = nav.findElement(By.xpath("//div[@class = \"alert alert-danger\"]")).getText();
 		Assert.assertEquals("Informe o nome da conta", obg);
 	    
+	}
+	
+	@Então("^sou notificado que já existe uma conta com esse nome$")
+	public void souNotificadoQueJáExisteUmaContaComEsseNome() throws Throwable {
+		String nomeExist = nav.findElement(By.xpath("//div[@class = \"alert alert-danger\"]")).getText();
+		Assert.assertEquals("Já existe uma conta com esse nome!", nomeExist);
 	}
  
 	@After
