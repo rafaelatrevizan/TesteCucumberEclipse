@@ -4,6 +4,7 @@ import org.junit.runner.RunWith;
 import cucumber.api.junit.Cucumber;
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
+import org.junit.BeforeClass;
 
 @RunWith(Cucumber.class)
 
@@ -17,4 +18,9 @@ import cucumber.api.SnippetType;
 		snippets = SnippetType.CAMELCASE,
 		tags = {"@conta"}
 		)
-public class RunnerTest {}
+public class RunnerTest {
+//	@BeforeClass
+//	public static void reset() {
+//		
+//	}
+}

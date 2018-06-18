@@ -18,454 +18,279 @@ formatter.feature({
     }
   ]
 });
-formatter.scenario({
-  "line": 10,
-  "name": "Deve inserir uma conta com sucesso",
-  "description": "",
-  "id": "cadastro-de-contas;deve-inserir-uma-conta-com-sucesso",
-  "type": "scenario",
-  "keyword": "Cenário",
-  "tags": [
-    {
-      "line": 9,
-      "name": "@contaSucess"
-    }
-  ]
-});
-formatter.step({
-  "line": 11,
-  "name": "que estou acessando a aplicação",
-  "keyword": "Dado "
-});
-formatter.step({
-  "line": 12,
-  "name": "informo o usuário \"rafaela@infotera.com.br\"",
-  "keyword": "Quando "
-});
-formatter.step({
+formatter.scenarioOutline({
   "line": 13,
-  "name": "a senha \"@trevizan2018\"",
-  "keyword": "E "
+  "name": "Deve validar regras de cadastro contas",
+  "description": "",
+  "id": "cadastro-de-contas;deve-validar-regras-de-cadastro-contas",
+  "type": "scenario_outline",
+  "keyword": "Esquema do Cenário"
 });
 formatter.step({
   "line": 14,
-  "name": "seleciono entrar",
-  "keyword": "E "
+  "name": "adiciono a conta \"\u003cnome\u003e\"",
+  "keyword": "Quando "
 });
 formatter.step({
   "line": 15,
-  "name": "visualizo a página inicial",
+  "name": "recebo a mensagem \"\u003cmensagem\u003e\"",
   "keyword": "Então "
 });
-formatter.step({
-  "line": 16,
-  "name": "seleciono Contas",
-  "keyword": "Quando "
-});
-formatter.step({
+formatter.examples({
   "line": 17,
-  "name": "seleciono Adicionar",
-  "keyword": "E "
+  "name": "",
+  "description": "",
+  "id": "cadastro-de-contas;deve-validar-regras-de-cadastro-contas;",
+  "rows": [
+    {
+      "cells": [
+        "nome",
+        "mensagem"
+      ],
+      "line": 18,
+      "id": "cadastro-de-contas;deve-validar-regras-de-cadastro-contas;;1"
+    },
+    {
+      "cells": [
+        "Conta de teste",
+        "Conta adicionada com sucesso!"
+      ],
+      "line": 19,
+      "id": "cadastro-de-contas;deve-validar-regras-de-cadastro-contas;;2"
+    },
+    {
+      "cells": [
+        "",
+        "Informe o nome da conta"
+      ],
+      "line": 20,
+      "id": "cadastro-de-contas;deve-validar-regras-de-cadastro-contas;;3"
+    },
+    {
+      "cells": [
+        "Conta mesmo nome",
+        "Já existe uma conta com esse nome!"
+      ],
+      "line": 21,
+      "id": "cadastro-de-contas;deve-validar-regras-de-cadastro-contas;;4"
+    }
+  ],
+  "keyword": "Exemplos"
+});
+formatter.background({
+  "line": 10,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Contexto"
 });
 formatter.step({
-  "line": 18,
-  "name": "informo a conta \"Conta de teste\"",
-  "keyword": "E "
+  "line": 11,
+  "name": "que desejo adicionar uma conta",
+  "keyword": "Dado "
 });
-formatter.step({
+formatter.match({
+  "location": "srBarrigaConta.queDesejoAdicionarUmaConta()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.scenario({
   "line": 19,
-  "name": "seleciono Salvar",
-  "keyword": "E "
+  "name": "Deve validar regras de cadastro contas",
+  "description": "",
+  "id": "cadastro-de-contas;deve-validar-regras-de-cadastro-contas;;2",
+  "type": "scenario",
+  "keyword": "Esquema do Cenário",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@conta"
+    }
+  ]
 });
 formatter.step({
+  "line": 14,
+  "name": "adiciono a conta \"Conta de teste\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Quando "
+});
+formatter.step({
+  "line": 15,
+  "name": "recebo a mensagem \"Conta adicionada com sucesso!\"",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "Então "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Conta de teste",
+      "offset": 18
+    }
+  ],
+  "location": "srBarrigaConta.adicionoAConta(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Conta adicionada com sucesso!",
+      "offset": 19
+    }
+  ],
+  "location": "srBarrigaConta.receboAMensagem(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.background({
+  "line": 10,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Contexto"
+});
+formatter.step({
+  "line": 11,
+  "name": "que desejo adicionar uma conta",
+  "keyword": "Dado "
+});
+formatter.match({
+  "location": "srBarrigaConta.queDesejoAdicionarUmaConta()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.scenario({
   "line": 20,
-  "name": "a conta é inserida com sucesso",
-  "keyword": "Então "
-});
-formatter.match({
-  "location": "srBarrigaConta.queEstouAcessandoAAplicação()"
-});
-formatter.result({
-  "duration": 5503578550,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "rafaela@infotera.com.br",
-      "offset": 19
-    }
-  ],
-  "location": "srBarrigaConta.informoOUsuário(String)"
-});
-formatter.result({
-  "duration": 234617064,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "@trevizan2018",
-      "offset": 9
-    }
-  ],
-  "location": "srBarrigaConta.aSenha(String)"
-});
-formatter.result({
-  "duration": 156722090,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoEntrar()"
-});
-formatter.result({
-  "duration": 674245969,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.visualizoAPáginaInicial()"
-});
-formatter.result({
-  "duration": 78859718,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoContas()"
-});
-formatter.result({
-  "duration": 129501563,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoAdicionar()"
-});
-formatter.result({
-  "duration": 381154397,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Conta de teste",
-      "offset": 17
-    }
-  ],
-  "location": "srBarrigaConta.informoAConta(String)"
-});
-formatter.result({
-  "duration": 387776602,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoSalvar()"
-});
-formatter.result({
-  "duration": 540523196,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.aContaÉInseridaComSucesso()"
-});
-formatter.result({
-  "duration": 51968822,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 676416945,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 23,
-  "name": "Não deve inserir uma conta sem nome",
+  "name": "Deve validar regras de cadastro contas",
   "description": "",
-  "id": "cadastro-de-contas;não-deve-inserir-uma-conta-sem-nome",
+  "id": "cadastro-de-contas;deve-validar-regras-de-cadastro-contas;;3",
   "type": "scenario",
-  "keyword": "Cenário",
+  "keyword": "Esquema do Cenário",
   "tags": [
     {
-      "line": 22,
-      "name": "@contaSemNome"
+      "line": 2,
+      "name": "@conta"
     }
   ]
 });
 formatter.step({
-  "line": 24,
-  "name": "que estou acessando a aplicação",
-  "keyword": "Dado "
-});
-formatter.step({
-  "line": 25,
-  "name": "informo o usuário \"rafaela@infotera.com.br\"",
+  "line": 14,
+  "name": "adiciono a conta \"\"",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 26,
-  "name": "a senha \"@trevizan2018\"",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 27,
-  "name": "seleciono entrar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 28,
-  "name": "visualizo a página inicial",
+  "line": 15,
+  "name": "recebo a mensagem \"Informe o nome da conta\"",
+  "matchedColumns": [
+    1
+  ],
   "keyword": "Então "
-});
-formatter.step({
-  "line": 29,
-  "name": "seleciono Contas",
-  "keyword": "Quando "
-});
-formatter.step({
-  "line": 30,
-  "name": "seleciono Adicionar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 31,
-  "name": "seleciono Salvar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 32,
-  "name": "vou notificar que o nome da conta é obrigatório",
-  "keyword": "Então "
-});
-formatter.match({
-  "location": "srBarrigaConta.queEstouAcessandoAAplicação()"
-});
-formatter.result({
-  "duration": 3843742171,
-  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "rafaela@infotera.com.br",
+      "val": "",
+      "offset": 18
+    }
+  ],
+  "location": "srBarrigaConta.adicionoAConta(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Informe o nome da conta",
       "offset": 19
     }
   ],
-  "location": "srBarrigaConta.informoOUsuário(String)"
+  "location": "srBarrigaConta.receboAMensagem(String)"
 });
 formatter.result({
-  "duration": 209266257,
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.background({
+  "line": 10,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Contexto"
+});
+formatter.step({
+  "line": 11,
+  "name": "que desejo adicionar uma conta",
+  "keyword": "Dado "
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "@trevizan2018",
-      "offset": 9
-    }
-  ],
-  "location": "srBarrigaConta.aSenha(String)"
+  "location": "srBarrigaConta.queDesejoAdicionarUmaConta()"
 });
 formatter.result({
-  "duration": 139205154,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoEntrar()"
-});
-formatter.result({
-  "duration": 676342689,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.visualizoAPáginaInicial()"
-});
-formatter.result({
-  "duration": 66767810,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoContas()"
-});
-formatter.result({
-  "duration": 102223078,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoAdicionar()"
-});
-formatter.result({
-  "duration": 437204366,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoSalvar()"
-});
-formatter.result({
-  "duration": 413525260,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.souNotificarQueONomeDaContaÉObrigatório()"
-});
-formatter.result({
-  "duration": 81810097,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 651750154,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.scenario({
-  "line": 35,
-  "name": "Não deve inserir uma conta com nome já existente",
+  "line": 21,
+  "name": "Deve validar regras de cadastro contas",
   "description": "",
-  "id": "cadastro-de-contas;não-deve-inserir-uma-conta-com-nome-já-existente",
+  "id": "cadastro-de-contas;deve-validar-regras-de-cadastro-contas;;4",
   "type": "scenario",
-  "keyword": "Cenário",
+  "keyword": "Esquema do Cenário",
   "tags": [
     {
-      "line": 34,
-      "name": "@jaexistente"
+      "line": 2,
+      "name": "@conta"
     }
   ]
 });
 formatter.step({
-  "line": 36,
-  "name": "que estou acessando a aplicação",
-  "keyword": "Dado "
-});
-formatter.step({
-  "line": 37,
-  "name": "informo o usuário \"rafaela@infotera.com.br\"",
+  "line": 14,
+  "name": "adiciono a conta \"Conta mesmo nome\"",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 38,
-  "name": "a senha \"@trevizan2018\"",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 39,
-  "name": "seleciono entrar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 40,
-  "name": "visualizo a página inicial",
+  "line": 15,
+  "name": "recebo a mensagem \"Já existe uma conta com esse nome!\"",
+  "matchedColumns": [
+    1
+  ],
   "keyword": "Então "
-});
-formatter.step({
-  "line": 41,
-  "name": "seleciono Contas",
-  "keyword": "Quando "
-});
-formatter.step({
-  "line": 42,
-  "name": "seleciono Adicionar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 43,
-  "name": "informo a conta \"Conta de teste\"",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 44,
-  "name": "seleciono Salvar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 45,
-  "name": "sou notificado que já existe uma conta com esse nome",
-  "keyword": "Então "
-});
-formatter.match({
-  "location": "srBarrigaConta.queEstouAcessandoAAplicação()"
-});
-formatter.result({
-  "duration": 4084345118,
-  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "rafaela@infotera.com.br",
+      "val": "Conta mesmo nome",
+      "offset": 18
+    }
+  ],
+  "location": "srBarrigaConta.adicionoAConta(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Já existe uma conta com esse nome!",
       "offset": 19
     }
   ],
-  "location": "srBarrigaConta.informoOUsuário(String)"
+  "location": "srBarrigaConta.receboAMensagem(String)"
 });
 formatter.result({
-  "duration": 222265556,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "@trevizan2018",
-      "offset": 9
-    }
-  ],
-  "location": "srBarrigaConta.aSenha(String)"
-});
-formatter.result({
-  "duration": 142676544,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoEntrar()"
-});
-formatter.result({
-  "duration": 753565721,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.visualizoAPáginaInicial()"
-});
-formatter.result({
-  "duration": 86326527,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoContas()"
-});
-formatter.result({
-  "duration": 129652493,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoAdicionar()"
-});
-formatter.result({
-  "duration": 440195194,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Conta de teste",
-      "offset": 17
-    }
-  ],
-  "location": "srBarrigaConta.informoAConta(String)"
-});
-formatter.result({
-  "duration": 229658711,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.selecionoSalvar()"
-});
-formatter.result({
-  "duration": 382811005,
-  "status": "passed"
-});
-formatter.match({
-  "location": "srBarrigaConta.souNotificadoQueJáExisteUmaContaComEsseNome()"
-});
-formatter.result({
-  "duration": 71653716,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 698776924,
-  "status": "passed"
+  "status": "skipped"
 });
 });

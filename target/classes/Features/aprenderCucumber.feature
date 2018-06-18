@@ -1,5 +1,5 @@
 #language: pt
-@feature
+@feature @unitarios
 Funcionalidade: Aprender Cucumber
     Como um aluno
     Eu quero aprender a utlizar o cucumber
