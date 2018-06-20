@@ -28,3 +28,4 @@ public class BasePage {
         return nav.findElement(By.id("toast-container")).getText();
     }
 }
+
